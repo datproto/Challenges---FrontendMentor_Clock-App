@@ -1,3 +1,4 @@
+/* eslint-disable react/function-component-definition */
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
@@ -78,9 +79,9 @@ const IndexPage: NextPage = () => {
   useEffect(() => {
     if (worldTime.time !== '') {
       const hour = parseInt(worldTime.time.substring(0, 3), 16);
-      if (0 <= hour && hour <= 6) {
+      if (hour >= 0 && hour <= 6) {
         setDarkMode(true);
-      } else if (18 <= hour) {
+      } else if (hour >= 18) {
         setDarkMode(true);
       } else {
         setDarkMode(false);

@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 interface ClockProps {
   time: string;
   city: string;
@@ -9,9 +11,9 @@ function Clock({ time, city, country, darkMode }: ClockProps) {
   return (
     <div className="z-10 text-white">
       <div className="flex items-center gap-4">
-        <img
+        <Image
           src={`/assets/desktop/${darkMode ? `icon-moon` : `icon-sun`}.svg`}
-          alt=""
+          alt="light-dark"
         />
         <h4>Good {darkMode ? 'Night' : 'Morning'}</h4>
       </div>

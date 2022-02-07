@@ -70,14 +70,14 @@ const IndexPage: NextPage = () => {
   }, []);
 
   useEffect(() => {
-    if (geo.tz != '') {
+    if (geo.tz !== '') {
       worldTimeApi();
     }
   }, [geo]);
 
   useEffect(() => {
-    if (worldTime.time != '') {
-      const hour = parseInt(worldTime.time.substring(0, 3));
+    if (worldTime.time !== '') {
+      const hour = parseInt(worldTime.time.substring(0, 3), 16);
       if (0 <= hour && hour <= 6) {
         setDarkMode(true);
       } else if (18 <= hour) {

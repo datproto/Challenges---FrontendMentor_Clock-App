@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface ClockProps {
   time: string;
   city: string;
@@ -7,7 +5,7 @@ interface ClockProps {
   darkMode?: boolean;
 }
 
-function Clock({ time, city, country, darkMode = false }: ClockProps) {
+function Clock({ time, city, country, darkMode }: ClockProps) {
   return (
     <div className="z-10 text-white">
       <div className="flex items-center gap-4">
@@ -32,5 +30,9 @@ function Clock({ time, city, country, darkMode = false }: ClockProps) {
     </div>
   );
 }
+
+Clock.defaultProps = {
+  darkMode: false,
+};
 
 export default Clock;

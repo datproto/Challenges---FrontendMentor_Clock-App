@@ -1,11 +1,9 @@
-import React from 'react';
+import styles from './button.module.css';
 
 interface ButtonProps {
   type: string;
-  onclick?: any;
+  onclick?: () => void;
 }
-
-import styles from './button.module.css';
 
 function Button({ type, onclick }: ButtonProps) {
   return (
@@ -18,7 +16,7 @@ function Button({ type, onclick }: ButtonProps) {
         <div className="absolute flex items-center justify-center w-full h-full">
           <img
             src={`/assets/desktop/${
-              type == 'more' ? 'icon-arrow-down.svg' : 'icon-arrow-up.svg'
+              type === 'more' ? 'icon-arrow-down.svg' : 'icon-arrow-up.svg'
             }`}
             alt=""
           />
@@ -27,5 +25,9 @@ function Button({ type, onclick }: ButtonProps) {
     </div>
   );
 }
+
+Button.defaultProps = {
+  onclick: null,
+};
 
 export default Button;

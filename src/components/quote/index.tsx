@@ -1,9 +1,7 @@
-import React from 'react';
-
 interface QuoteProps {
   quote: string;
   author: string;
-  onclick?: any;
+  onclick?: () => void;
 }
 
 function Quote({ quote, author, onclick }: QuoteProps) {
@@ -25,5 +23,9 @@ function Quote({ quote, author, onclick }: QuoteProps) {
     </div>
   );
 }
+
+Quote.defaultProps = {
+  onclick: null,
+};
 
 export default Quote;

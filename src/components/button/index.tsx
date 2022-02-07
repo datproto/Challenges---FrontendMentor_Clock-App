@@ -5,28 +5,16 @@ interface ButtonProps {
   onclick?: any;
 }
 
+import styles from './button.module.css';
+
 function Button({ type, onclick }: ButtonProps) {
   return (
     <div
-      className="z-10 flex items-center gap-3 p-2 uppercase bg-white rounded-full cursor-pointer"
+      className="z-10 flex items-center gap-3 p-1 uppercase bg-white rounded-full cursor-pointer group md:p-2"
       onClick={onclick}
     >
-      <span
-        className="ml-2"
-        style={{
-          fontSize: '16px',
-          lineHeight: '28px',
-          letterSpacing: '5px',
-          fontWeight: '700',
-          color: '#979797',
-        }}
-      >
-        {type}
-      </span>
-      <div
-        className="relative w-10 h-10 rounded-full"
-        style={{ backgroundColor: '#303030' }}
-      >
+      <span className={`ml-3 ${styles.text}`}>{type}</span>
+      <div className={`${styles.icon} bg-[#303030] group-hover:bg-[#999999]`}>
         <div className="absolute flex items-center justify-center w-full h-full">
           <img
             src={`/assets/desktop/${

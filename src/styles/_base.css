@@ -3,5 +3,6 @@ body,
 body > div:first-child,
 div#__next,
 div#__next > div {
-  @apply w-full h-full
+  @apply w-full h-full;
+  overflow: hidden;
 }

@@ -5,24 +5,3 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
-
-main {
-  background-image: url('/assets/mobile/bg-image-daytime.jpg');
-  @apply bg-cover bg-center;
-
-  @media screen(md) {
-    background-image: url('/assets/tablet/bg-image-daytime.jpg');
-  }
-
-  @media screen(xl) {
-    background-image: url('/assets/desktop/bg-image-daytime.jpg');
-  }
-
-  &::before {
-    content: '';
-    top: 0;
-    left: 0;
-    @apply w-full h-full absolute z-0;
-    background-color: rgba(0, 0 ,0 , 0.4)
-  }
-}

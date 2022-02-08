@@ -18,6 +18,8 @@ function Quote({ quote, author, onclick }: QuoteProps) {
           className="cursor-pointer"
           src="/assets/desktop/icon-refresh.svg"
           alt="re-quote"
+          width="18px"
+          height="18px"
         />
       </div>
 

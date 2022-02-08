@@ -22,6 +22,8 @@ function Button({ type, onclick }: ButtonProps) {
               type === 'more' ? 'icon-arrow-down.svg' : 'icon-arrow-up.svg'
             }`}
             alt="icon"
+            width="14px"
+            height="9px"
           />
         </div>
       </div>

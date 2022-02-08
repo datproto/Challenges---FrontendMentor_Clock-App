@@ -14,6 +14,8 @@ function Clock({ time, city, country, darkMode }: ClockProps) {
         <Image
           src={`/assets/desktop/${darkMode ? `icon-moon` : `icon-sun`}.svg`}
           alt="light-dark"
+          width="24px"
+          height="24px"
         />
         <h4>Good {darkMode ? 'Night' : 'Morning'}</h4>
       </div>

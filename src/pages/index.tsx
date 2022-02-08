@@ -48,7 +48,7 @@ const IndexPage: NextPage = () => {
   };
 
   const worldTimeApi = () => {
-    fetch(`http://worldtimeapi.org/api/timezone/${geo.tz}`)
+    fetch(`https://worldtimeapi.org/api/timezone/${geo.tz}`)
       .then((response) => response.json())
       .then((data) => {
         setWorldTime({
@@ -92,7 +92,7 @@ const IndexPage: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Redux Toolkit</title>
+        <title>Clock App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
